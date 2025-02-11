@@ -1,19 +1,19 @@
-# Ignorowanie całego środowiska wirtualnego
+# Ignoring the entire virtual environment
 myenv/
 
-# Ignorowanie plików IDE (np. VS Code)
+# Ignoring IDE files (e.g., VS Code)
 .vscode/
 
-# Ignorowanie plików generowanych przez Pythona
+# Ignoring Python-generated files
 __pycache__/
 *.pyc
 *.pyo
 .Python
 
-# Ignorowanie plików logów
+# Ignoring log files
 *.log
 
-# Ignorowanie plików instalacyjnych
+# Ignoring installation files
 *.egg
 *.egg-info
 dist/
