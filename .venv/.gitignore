@@ -1,20 +1,12 @@
-# Ignorowanie całego środowiska wirtualnego
-myenv/
+# Ignore everything
+*
 
-# Ignorowanie plików IDE (np. VS Code)
-.vscode/
+# Don't ignore the .gitignore file itself
+!.gitignore
 
-# Ignorowanie plików generowanych przez Pythona
-__pycache__/
-*.pyc
-*.pyo
-.Python
+# Don't ignore specific files or directories you want to track
+!your_project_directory/
 
-# Ignorowanie plików logów
-*.log
-
-# Ignorowanie plików instalacyjnych
-*.egg
-*.egg-info
-dist/
-build/
+# Don't ignore important files (like README, LICENSE, etc.)
+!README.md
+!LICENSE
