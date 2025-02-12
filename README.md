@@ -41,7 +41,7 @@ Components Used:
 - `OpenAI Embeddings`
 - `Astra DB`
 
-https://github.com/user-attachments/assets/512c71c9-1b11-4cb6-bdc6-af2a401b313f
+https://github.com/user-attachments/assets/8d829806-5ed9-4592-be63-1aac94a4325a
 
 
 The first part of the workflow is concerned with loading the data and preparing it for further processing.
@@ -72,6 +72,9 @@ Components Used:
 - `Astra DB`
 - `Data Message`
 
+https://github.com/user-attachments/assets/12fc8a5e-541e-4457-a425-2848fa434fd2
+
+
 ### Text input
 
 This component allows the user to input a query or text for analysis. In this case, the user asks the question "do you teach OOP?".
@@ -99,7 +102,10 @@ Components Used:
 - `Prompt`
 - `OpenAI`
 - `Text Output`
-  
+
+https://github.com/user-attachments/assets/63ce04b3-214f-486f-b460-c839ee610d43
+
+
 ### Data to Message: 
 
 Converts input data into a message format using a dynamic template. The data includes context, question, and website, which are formatted into a message for the next step.
