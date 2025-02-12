@@ -39,12 +39,13 @@ Components Used:
 - `File Component`
 - `Split Text`
 - `OpenAI Embeddings`
+- `Astra DB`
 
 The first part of the workflow is concerned with loading the data and preparing it for further processing.
 
 ### File Component:
 
-Data is loaded from a CSV or other text-based files. The File component is used to upload the dataset to Langflow.
+The first step of the process is to load the data file. In this case, a CSV file containing course data `Course Modules - Sheet1.csv` will be processed and analyzed.
 
 ### Split Text:
 
@@ -53,6 +54,63 @@ The chunk size is adjustable, and for example, 1000 words per chunk is a typical
 
 ### OpenAI Embeddings:
 
-After splitting, each text chunk is passed through OpenAI’s embedding model (e.g., text-embedding-3-small), which converts the text into numerical vectors (embeddings).
+After splitting, each text chunk is passed through OpenAI’s embedding model `text-embedding-3-small`, which converts the text into numerical vectors (embeddings).
 These embeddings represent the semantic meaning of the text, enabling the chatbot to search for similar queries or text later on.
 
+### Astra DB
+
+The embeddings are then stored in Astra DB, which serves as a scalable solution for storing and querying vectors. In this case, in this case a database called `langflow_db` is used to store the embeddings.
+
+## Processing User Queries and Searching for Responses in the Database
+
+Components Used:
+- `Text Input`
+- `OpenAI Embeddings`
+- `Astra DB`
+- `Data Message`
+
+### Text input
+
+This component allows the user to input a query or text for analysis. In this case, the user asks the question "do you teach OOP?".
+
+### OpenAI Embeddings
+
+In this step, the user's input is transformed into a vector (embedding) using the OpenAI model `text-embedding-3-small`. Generating embeddings allows representing the text in numerical form, enabling later search and comparison of similar queries.
+
+### Astra DB
+
+The generated embeddings are stored in Astra DB, a scalable and powerful NoSQL database.
+This storage setup enables the chatbot to efficiently retrieve embeddings and perform similarity searches, ensuring real-time access to data.
+Data is stored in the `langflow_db` database.
+
+### Data to Message 
+
+Finally, the search results are converted into messages that can be displayed to the user. The `Data to Message` component transforms the resulting data into a message format, making it usable for display or further use in the application. 
+
+## User Interaction and Response Generation
+
+This section of the project handles the user's input and generates a response using OpenAI's GPT model. Here's a breakdown of the workflow:
+
+Components Used:
+- `Data to Message`
+- `Prompt`
+- `OpenAI`
+- `Text Output`
+  
+### Data to Message: 
+
+Converts input data into a message format using a dynamic template. The data includes context, question, and website, which are formatted into a message for the next step.
+
+### Prompt: 
+
+Builds a dynamic prompt for OpenAI by inserting the user's data into predefined placeholders - in this case `{context}`, `{question}`). This creates a clear prompt for the AI.
+
+### OpenAI: 
+
+Sends the dynamically generated prompt to OpenAI's GPT-4 Mini model for processing. The model generates a response based on the prompt, and the temperature is set to 0.10 for more deterministic results.
+
+### Text Output: 
+
+Displays the AI-generated response, which is presented to the user.
+
+This workflow enables efficient interaction with OpenAI models and generates real-time responses based on user input.
