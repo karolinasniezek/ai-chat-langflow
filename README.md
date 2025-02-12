@@ -41,6 +41,9 @@ Components Used:
 - `OpenAI Embeddings`
 - `Astra DB`
 
+https://github.com/user-attachments/assets/512c71c9-1b11-4cb6-bdc6-af2a401b313f
+
+
 The first part of the workflow is concerned with loading the data and preparing it for further processing.
 
 ### File Component:
