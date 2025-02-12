@@ -7,10 +7,11 @@ The application consists of several interconnected components in Langflow, inclu
 
 To run the application locally, you need to have the following installed:
 
-Python 3.8+ (recommended version: 3.11+)
-Langflow (for creating the workflow)
-Langchain (for working with language models)
-Additionally, you will need an OpenAI account (to obtain an API key) and an Astra DB account (for storing and searching data).
+- Python 3.8+ (recommended version: 3.11+)
+- Langflow (for creating the workflow)
+- Langchain (for working with language models)
+- Additionally, you will need an OpenAI account (to obtain an API key)
+- Astra DB account (for storing and searching data).
 
 ## How to Run the Application
 
