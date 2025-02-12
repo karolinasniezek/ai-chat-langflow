@@ -13,13 +13,15 @@ To run the application locally, you need to have the following installed:
 - Additionally, you will need an OpenAI account (to obtain an API key)
 - Astra DB account (for storing and searching data).
 
-## How to Run the Application
+## How to Run the Langflow
 
 Run Langflow: After installing everything, run Langflow to create and execute your workflow.
 
 In the terminal, navigate to the project folder and run:
 
 `python langflow run`
+
+After installing the application and the required dependencies, you can launch Langflow. However, please note that by default, only an empty instance of Langflow is started, without the project I have created in Langflow.
 
 ## Project Structure
 
